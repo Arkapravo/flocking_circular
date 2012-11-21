@@ -1,0 +1,90 @@
+include "pioneer.inc"
+include "map.inc"
+
+speedup 30.000
+
+paused 1
+
+# low resolution gives fast raytracing. set this only as small as you need for your application
+resolution 0.1
+
+# this is very helpful if you have multiple CPUs - a good value is $(number of CPU cores) - 
+threads 2
+
+# configure the GUI window
+window
+(
+  size [ 1366.000 693.000 ] # in pixels
+  scale 10.895            
+  center [ 19.939  -5.160 ]
+  rotate [ 0  0 ]
+  show_data 0              # 1=on 0=off
+)
+
+# load an environment bitmap
+floorplan
+( 
+  name "circle"
+  size [120.000 120.000 0.800]
+  pose [0 0 0 0]
+  bitmap "circle.png"  
+)
+
+
+define flocker pioneer2dx_front_sonar
+(		  
+  color "red"
+  ctrl "pioneer_flocking"
+  fiducial_return 1
+  fiducial()
+)
+
+flocker( pose [ 55 0 0 -90 ] )
+
+flocker( pose [ 54.322 8.603 0 -81 ] )
+flocker( pose [ 52.308 16.995 0 -72 ] )
+flocker( pose [ 49.005 24.969 0 -63 ] )
+flocker( pose [ 44.495 32.328 0 -54 ] )
+flocker( pose [ 38.89 38.89 0 -45 ] )
+flocker( pose [ 32.328 44.495 0 -36 ] )
+flocker( pose [ 24.969 49.005 0 -27 ] )
+flocker( pose [ 16.995 52.308 0 -18 ] )
+flocker( pose [ 8.603 54.322 0 -9 ] )
+
+flocker( pose [ 0 55 0 0 ] )
+
+flocker( pose [ -54.322 8.603 0 81 ] )
+flocker( pose [ -52.308 16.995 0 72 ] )
+flocker( pose [ -49.005 24.969 0 63 ] )
+flocker( pose [ -44.495 32.328 0 54 ] )
+flocker( pose [ -38.89 38.89 0 45 ] )
+flocker( pose [ -32.328 44.495 0 36 ] )
+flocker( pose [ -24.969 49.005 0 27 ] )
+flocker( pose [ -16.995 52.308 0 18 ] )
+flocker( pose [ -8.603 54.322 0 9 ] )
+
+flocker( pose [ -54.322 -8.603 0 99 ] )
+flocker( pose [ -52.308 -16.995 0 108 ] )
+flocker( pose [ -49.005 -24.969 0 117 ] )
+flocker( pose [ -44.495 -32.328 0 126 ] )
+flocker( pose [ -38.89 -38.89 0 135 ] )
+flocker( pose [ -32.328 -44.495 0 144 ] )
+flocker( pose [ -24.969 -49.005 0 153 ] )
+flocker( pose [ -16.995 -52.308 0 162 ] )
+flocker( pose [ -8.603 -54.322 0 171 ] )
+
+flocker( pose [ 0 -55 0 180 ] )
+
+flocker( pose [ 54.322 -8.603 0 -99 ] )
+flocker( pose [ 52.308 -16.995 0 -108 ] )
+flocker( pose [ 49.005 -24.969 0 -117 ] )
+flocker( pose [ 44.495 -32.328 0 -126 ] )
+flocker( pose [ 38.89 -38.89 0 -135 ] )
+flocker( pose [ 32.328 -44.495 0 -144 ] )
+flocker( pose [ 24.969 -49.005 0 -153 ] )
+flocker( pose [ 16.995 -52.308 0 -162 ] )
+flocker( pose [ 8.603 -54.322 0 -171 ] )
+
+flocker( pose [ -55 0 0 90 ] )
+
+

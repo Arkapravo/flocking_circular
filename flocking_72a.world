@@ -1,0 +1,123 @@
+include "pioneer.inc"
+include "map.inc"
+
+speedup 10.000
+
+paused 1
+
+# low resolution gives fast raytracing. set this only as small as you need for your application
+resolution 0.1
+
+# this is very helpful if you have multiple CPUs - a good value is $(number of CPU cores) - 
+threads 2
+
+# configure the GUI window
+window
+(
+  size [ 1366.000 693.000 ] # in pixels
+  scale 10.895            
+  center [ 19.939  -5.160 ]
+  rotate [ 0  0 ]
+  show_data 0              # 1=on 0=off
+)
+
+# load an environment bitmap
+floorplan
+( 
+  name "circle"
+  size [79.000 79.000 0.800]
+  pose [0 0 0 0]
+  bitmap "circle.png"  
+)
+
+
+define flocker pioneer2dx_front_sonar
+(		  
+  color "red"
+  ctrl "pioneer_flocking"
+  fiducial_return 1
+  fiducial()
+)
+
+flocker( pose [ 35 0 0 -90 ] )
+
+flocker( pose [ 34.866 3.05 0 -85 ] )
+flocker( pose [ 34.468 6.077 0 -80 ] )
+flocker( pose [ 33.807 9.058 0 -75 ] )
+flocker( pose [ 32.889 11.97 0 -70 ] )
+flocker( pose [ 31.72 14.791 0 -65 ] )
+flocker( pose [ 30.31 17.5 0 -60 ] )
+flocker( pose [ 28.67 20.075 0 -55 ] )
+flocker( pose [ 26.811 22.497 0 -50 ] )
+flocker( pose [ 24.748 24.748 0 -45 ] )
+flocker( pose [ 22.497 26.811 0 -40 ] )
+flocker( pose [ 20.075 28.67 0 -35 ] )
+flocker( pose [ 17.5 30.31 0 -30 ] )
+flocker( pose [ 14.791 31.72 0 -25 ] )
+flocker( pose [ 11.97 32.889 0 -20 ] )
+flocker( pose [ 9.058 33.807 0 -15 ] )
+flocker( pose [ 6.077 34.468 0 -10 ] )
+flocker( pose [ 3.05 34.866 0 -5 ] )
+
+
+flocker( pose [ 0 35 0 0 ] )
+
+flocker( pose [ -34.866 3.05 0 85 ] )
+flocker( pose [ -34.468 6.077 0 80 ] )
+flocker( pose [ -33.807 9.058 0 75 ] )
+flocker( pose [ -32.889 11.97 0 70 ] )
+flocker( pose [ -31.72 14.791 0 65 ] )
+flocker( pose [ -30.31 17.5 0 60 ] )
+flocker( pose [ -28.67 20.075 0 55 ] )
+flocker( pose [ -26.811 22.497 0 50 ] )
+flocker( pose [ -24.748 24.748 0 45 ] )
+flocker( pose [ -22.497 26.811 0 40 ] )
+flocker( pose [ -20.075 28.67 0 35 ] )
+flocker( pose [ -17.5 30.31 0 30 ] )
+flocker( pose [ -14.791 31.72 0 25 ] )
+flocker( pose [ -11.97 32.889 0 20 ] )
+flocker( pose [ -9.058 33.807 0 15 ] )
+flocker( pose [ -6.077 34.468 0 10 ] )
+flocker( pose [ -3.05 34.866 0 5 ] )
+
+
+flocker( pose [ -35 0 0 90 ] )
+
+flocker( pose [ -34.866 -3.05 0 95 ] )
+flocker( pose [ -34.468 -6.077 0 100 ] )
+flocker( pose [ -33.807 -9.058 0 105 ] )
+flocker( pose [ -32.889 -11.97 0 110 ] )
+flocker( pose [ -31.72 -14.791 0 115 ] )
+flocker( pose [ -30.31 -17.5 0 120 ] )
+flocker( pose [ -28.67 -20.075 0 125 ] )
+flocker( pose [ -26.811 -22.497 0 130 ] )
+flocker( pose [ -24.748 -24.748 0 135 ] )
+flocker( pose [ -22.497 -26.811 0 140 ] )
+flocker( pose [ -20.075 -28.67 0 145 ] )
+flocker( pose [ -17.5 -30.31 0 150 ] )
+flocker( pose [ -14.791 -31.72 0 155 ] )
+flocker( pose [ -11.97 -32.889 0 160 ] )
+flocker( pose [ -9.058 -33.807 0 165 ] )
+flocker( pose [ -6.077 -34.468 0 170 ] )
+flocker( pose [ -3.05 -34.866 0 175 ] )
+
+
+flocker( pose [ 0 -35 0 -180 ] )
+
+flocker( pose [ 34.866 -3.05 0 -95 ] )
+flocker( pose [ 34.468 -6.077 0 -100 ] )
+flocker( pose [ 33.807 -9.058 0 -105 ] )
+flocker( pose [ 32.889 -11.97 0 -110 ] )
+flocker( pose [ 31.72 -14.791 0 -115 ] )
+flocker( pose [ 30.31 -17.5 0 -120 ] )
+flocker( pose [ 28.67 -20.075 0 -125 ] )
+flocker( pose [ 26.811 -22.497 0 -130 ] )
+flocker( pose [ 24.748 -24.748 0 -135 ] )
+flocker( pose [ 22.497 -26.811 0 -140 ] )
+flocker( pose [ 20.075 -28.67 0 -145 ] )
+flocker( pose [ 17.5 -30.31 0 -150 ] )
+flocker( pose [ 14.791 -31.72 0 -155 ] )
+flocker( pose [ 11.97 -32.889 0 -160 ] )
+flocker( pose [ 9.058 -33.807 0 -165 ] )
+flocker( pose [ 6.077 -34.468 0 -170 ] )
+flocker( pose [ 3.05 -34.866 0 -175 ] )

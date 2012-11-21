@@ -1,0 +1,59 @@
+include "pioneer.inc"
+include "map.inc"
+
+speedup 10.000
+
+paused 1
+
+# low resolution gives fast raytracing. set this only as small as you need for your application
+resolution 0.1
+
+# this is very helpful if you have multiple CPUs - a good value is $(number of CPU cores) - 
+threads 2
+
+# configure the GUI window
+window
+(
+  size [ 1366.000 693.000 ] # in pixels
+  scale 10.895            
+  center [ 19.939  -5.160 ]
+  rotate [ 0  0 ]
+  show_data 0              # 1=on 0=off
+)
+
+# load an environment bitmap
+floorplan
+( 
+  name "circle"
+  size [48.000 48.000 0.800]
+  pose [0 0 0 0]
+  bitmap "circle.png"  
+)
+
+
+define flocker pioneer2dx_front_sonar
+(		  
+  color "red"
+  ctrl "pioneer_flocking"
+  fiducial_return 1
+  fiducial()
+)
+
+flocker( pose [ 20 0 0 -90 ] )
+
+flocker( pose [ 18.27 8.134 0 -66 ] )
+flocker( pose [ 13.382 14.862 0 -42 ] )
+flocker( pose [ 6.18 19.021 0 -18 ] )
+flocker( pose [ -2.09 19.89 0 6 ] )
+flocker( pose [ -10 17.32 0 30 ] )
+flocker( pose [ -16.18 11.755 0 54 ] )
+flocker( pose [ -19.562 4.158 0 78 ] )
+
+flocker( pose [ 18.27 -8.134 0 -114 ] )
+flocker( pose [ 13.382 -14.862 0 -138 ] )
+flocker( pose [ 6.18 -19.021 0 -162 ] )
+flocker( pose [ -2.09 -19.89 0 174 ] )
+flocker( pose [ -10 -17.32 0 150 ] )
+flocker( pose [ -16.18 -11.755 0 126 ] )
+flocker( pose [ -19.562 -4.158 0 102 ] )
+

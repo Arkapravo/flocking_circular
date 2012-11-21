@@ -1,0 +1,86 @@
+include "pioneer.inc"
+include "map.inc"
+
+speedup 30.000
+
+paused 1
+
+# low resolution gives fast raytracing. set this only as small as you need for your application
+resolution 0.1
+
+# this is very helpful if you have multiple CPUs - a good value is $(number of CPU cores) - 
+threads 2
+
+# configure the GUI window
+window
+(
+  size [ 1366.000 693.000 ] # in pixels
+  scale 10.895            
+  center [ 19.939  -5.160 ]
+  rotate [ 0  0 ]
+  show_data 0              # 1=on 0=off
+)
+
+# load an environment bitmap
+floorplan
+( 
+  name "circle"
+  size [109.000 109.000 0.800]
+  pose [0 0 0 0]
+  bitmap "circle.png"  
+)
+
+
+define flocker pioneer2dx_front_sonar
+(		  
+  color "red"
+  ctrl "pioneer_flocking"
+  fiducial_return 1
+  fiducial()
+)
+
+flocker( pose [ 50 0 0 -90 ] )
+
+flocker( pose [ 49.24 8.682 0 -80 ] )
+flocker( pose [ 46.984 17.101 0 -70 ] )
+flocker( pose [ 43.301 25 0 -60 ] )
+flocker( pose [ 38.302 32.139 0 -50 ] )
+flocker( pose [ 32.139 38.302 0 -40 ] )
+flocker( pose [ 25 43.301 0 -30 ] )
+flocker( pose [ 17.101 46.984 0 -20 ] )
+flocker( pose [ 8.682 49.24 0 -10 ] )
+
+flocker( pose [ 0 50 0 0 ] )
+
+flocker( pose [ -49.24 8.682 0 80 ] )
+flocker( pose [ -46.984 17.101 0 70 ] )
+flocker( pose [ -43.301 25 0 60 ] )
+flocker( pose [ -38.302 32.139 0 50 ] )
+flocker( pose [ -32.139 38.302 0 40 ] )
+flocker( pose [ -25 43.301 0 30 ] )
+flocker( pose [ -17.101 46.984 0 20 ] )
+flocker( pose [ -8.682 49.24 0 10 ] )
+
+flocker( pose [ -50 0 0 90 ] )
+
+flocker( pose [ -49.24 -8.682 0 100 ] )
+flocker( pose [ -46.984 -17.101 0 110 ] )
+flocker( pose [ -43.301 -25 0 120 ] )
+flocker( pose [ -38.302 -32.139 0 130 ] )
+flocker( pose [ -32.139 -38.302 0 140 ] )
+flocker( pose [ -25 -43.301 0 150 ] )
+flocker( pose [ -17.101 -46.984 0 160 ] )
+flocker( pose [ -8.682 -49.24 0 170 ] )
+
+flocker( pose [ 0 -50 0 180 ] )
+
+flocker( pose [ 49.24 -8.682 0 -100 ] )
+flocker( pose [ 46.984 -17.101 0 -110 ] )
+flocker( pose [ 43.301 -25 0 -120 ] )
+flocker( pose [ 38.302 -32.139 0 -130 ] )
+flocker( pose [ 32.139 -38.302 0 -140 ] )
+flocker( pose [ 25 -43.301 0 -150 ] )
+flocker( pose [ 17.101 -46.984 0 -160 ] )
+flocker( pose [ 8.682 -49.24 0 -170 ] )
+
+
