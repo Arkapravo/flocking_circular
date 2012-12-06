@@ -7,3 +7,9 @@ Swarm formation in circular geometry using stage (version 3.2.2, http://sourcefo
 To run these simulations :  
 (1) Stage 3.2.2 must be installed   
 (2) A sample simulation for 36 robots in a circular formation can be run as => stage flocking_36.world
+
+Youtube videos for some of these simulations,
+(1) http://www.youtube.com/watch?v=3VFaFVnuBT8
+(2) http://www.youtube.com/watch?v=3Q_s4P6n-T4
+(3) http://www.youtube.com/watch?v=S7hbDEbSTRE
+(4) http://www.youtube.com/watch?v=FS0HBhfkR54
