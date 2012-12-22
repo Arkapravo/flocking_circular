@@ -8,6 +8,8 @@ To run these simulations :
 (1) Stage 3.2.2 must be installed   
 (2) A sample simulation for 36 robots in a circular formation can be run from the terminal window as => _stage flocking_36.world_
 
+![Image Alt](https://lh6.googleusercontent.com/-p8yd_L1_m4o/UNWButp2hAI/AAAAAAAACLE/kdDxeM_9QXc/s336/Pic4.png)
+
 Youtube videos for some of these simulations,   
 (1) http://www.youtube.com/watch?v=3VFaFVnuBT8  
 (2) http://www.youtube.com/watch?v=3Q_s4P6n-T4  
