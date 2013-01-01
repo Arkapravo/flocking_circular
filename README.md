@@ -2,9 +2,9 @@ flocking_circular
 =================
 Authors : Satyajeet (styjyt.online@gmail.com) and Arkapravo Bhaumik (arkapravobhaumik@gmail.com)
 
-Swarm formation in circular geometry simulations in Stage (version 3.2.2, http://sourceforge.net/projects/playerstage/files/Stage/3.2.2/).
+Swarm formation in circular geometry simulations in Stage (version 3.2.2, http://sourceforge.net/projects/playerstage/files/Stage/3.2.2/ which has also been forked in, https://github.com/Arkapravo/Stage-3.2.2).
 
-These simulations use _pioneer_flocking_ (https://github.com/rtv/Stage/blob/master/examples/ctrl/pioneer_flocking.cc) stage controllers, further details can be found in the following short paper, http://ieeexplore.ieee.org/xpl/articleDetails.jsp?tp=&arnumber=6199085.
+These simulations use _pioneer_flocking_ (https://github.com/Arkapravo/Stage-3.2.2/blob/master/examples/ctrl/pioneer_flocking.cc) stage controllers, further details can be found in the following short paper, http://ieeexplore.ieee.org/xpl/articleDetails.jsp?tp=&arnumber=6199085.
 
 To run these simulations
 ------------------------
